@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper,danish]{article}
+\usepackage[danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xfrac}
+\usepackage[dot, autosize, outputdir="dotgraphs/"]{dot2texi}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\rhead{\today}
+\rfoot{\thepage}
+\setlength\parskip{1em}
+\setlength\parindent{1em}
+
+%% Titel og forfatter
+\title{Ugeopgave 4: Kundemodenhed}
+\author{Søren Pilgård, 190689, vpb984\\
+Caroline Miller, 04071979, twq135\\
+René Løwe Jacobsen, 070192, vlx198\\
+Paw Saabye Petersen, 110788, vwn245}
+
+%% Start dokumentet
+\begin{document}
+
+%% Vis titel
+\maketitle
+\newpage
+
+%% Vis indholdsfortegnelse
+%\tableofcontents
+%\newpage
+
+\section{Indledning}
+Udgangspunktet for denne opgave er Tinglysningsprojektet, som her skal bedømmes ud fra Videnskabsministeriets modenhedsmodel. Denne består egentlig af 30 punkter med 3 underpunkter for hver. I denne opgave skal vi dog kun kigge på 4 af punkterne, nemlig 12, 13, 14 og 17. Disse drejer sig om evnen til at kravspecificere, til at lave projektplan, til at estimere og allokere egne medarbejdere og til at udøve risikostyring. Vi skal ikke forholde os til underpunkterne af hver punkt, men bare besvare det overordnede spørgsmål. Der skal argumenteres, ud fra kilderne, hvorfor vi placerer modenheden på et givet niveau.
+
+
+\section{Punkt 12: Evne til at kravspecificere}
+Domstolsstyrelsen har lavet en kravspecifikation, der er en god blanding af krav, baggrundsoplysninger og eksempler på løsninger, der skal laves. Dette giver en lidt rodet sammensætning af forskellige dele, og det er svært at skelne hvad der er reelle krav, der skal leves op til. \cite[s.~17]{Rigs}: ``Det er it-professorens vurdering, at kravspecifikationen er rimelig kortfattet (406 sider) og ret præcis. Alligevel vurderer it-professoren, at kravspecifikationen har mange svagheder. Bl.a. at det er uklart, hvad der er krav, hvad der er baggrundsoplysninger, og hvad der er eksempler på løsninger.''
+
+Nedenstående er fra \cite[s.~96]{Krav}:\\
+``\textbf{Særlige bestemmelser}\\
+Det skal være muligt ud fra en liste at knytte en eller flere særlige bestemmelser til en anmeldelse.\\
+\\
+\textbf{Beskrivelse af særlige bestemmelser}\\
+Tilbudsgiver skal beskrive hvorledes funktionalitet til særlige bestemmelser opbygges.\\
+\\
+\textbf{Særlige bestemmelser som fri tekst}\\
+Det skal være muligt at angive særlige bestemmelser som fri tekst.''\\
+
+Første og tredje punkt er reelle krav, mens det midterste er et infopunkt. Det kan virke forvirrende at læse dette, og sørge for at få alle kravene med. Samtidig er de meget store figurer, som følger senere i kravspecifikationen meget voldsomme og uoverskuelige. Det kunne have været smart at koge dem ned til mindre dele, som kunne have været forskellige dele af programmet.
+
+Kravspecifikationen har som sådan de vigtige oplysninger, men den er rodet og usammenhængende.
+
+
+\section{Punkt 13: Evne til at lave projektplan}
+Der er ikke udarbejdet en milepælsplan for hele projektet kun i forhold til implementeringen, men den mangler for den organisatoriske forberedelse.\cite[s.~29]{Rigs}:
+``Rigsrevisionen finder, at en milepælsplan bør omfatte alle aspekter af den organisatoriske forberedelse af et it-system og klart angive planlagte aktiviteter, tidsfrister og ansvarsfordeling. Dette særlig henset til, at det digitale tinglysningssystem var et højrisikoprojekt og et økonomisk væsentligt projekt, der involverede mange interessenter og medførte mange organisatoriske udfordringer.''
+
+Hvis man kigger på tidsplanen vedlagt i bilaget er den meget lidt overskuelig. Den indeholder kun overordnede tidsangivelser, og den har slet ikke nogen specifikation af det organisatoriske arbejde, der fører op til selve udbuddet - udarbejdelse af kravspecifikation etc. Hvis den skulle have været et reelt stykke arbejdspapir, så skulle den indeholde flere punkter, flere tidsangivelser, mere udspecificering.
+
+Man kan også i Kravspecifikationen\cite[s.386]{Krav} se at de kort nævner: "`Tinglysningssekretariatets forberedende aktiviteter har kørt frem til foråret 2006, og resultaterne af dette arbejde er gengivet i denne foreløbige kravopgørelse af det kommende system til elektronisk tinglysning."' Det er lidt underligt at de ikke har inkluderet dette arbejde i deres projektplan, da det jo er en vigtig indledende del af projektet.
+
+
+
+\section{Punkt 14: Evne til at estimere og allokere egne medarbejdere}
+
+Den interne rolle- og ansvarsfordeling i relation til implementeringen var ikke i tilstrækkelig grad klarlagt og beskrevet. Dette er klart i forhold til at deres milepælsplan ikke indeholder noget om uddannelse af medarbejdere, udarbejdelser af vejledninger etc.
+
+De overvurderede deres medarbejdere og det antal sager, som de kunne klare. Der var ikke sat tid nok af til at medarbejderne skulle vænne sig til det nye system og opnå erfaring i det, inden deres produktivitet nåede det forventede niveau. Dette gjorde jo at systemet fejlede i start-up fasen, og det gik ud over de kunder der skulle tinglyses, da arbejdet gik langsommere end forventet. Der blev ikke afsat nok tid til at håndtere at ikke alle erfarne medarbejdere ville flytte med til Hobro, og en del af medarbejderne var derfor under oplæring. 
+
+Derudover har projektet været afhængig af en enkelt projektleder: \cite[s.~31]{Rigs}: "`Rigsrevisionens undersøgelse viser, at styringen af det digitale tinglysningsrojekt i høj grad har været personafhængig. Således har implementeringen af projektet været meget afhængig af Domsstolsstyrelsens projektleder, som også er ansvarlig for Tinglysningsretteni Hobro, og som har varetaget både det faglige juridiske ansvar og ansvaret for projektet implementering. En enkelt nøgleperson gør projektet sårbart."'
+
+
+\section{Punkt 17: Evne til at udøve risikostyring}
+
+Der er ikke væsentlig forskel på de to risikoanalyser der er udarbejdet i henholdsvis marts 2006 og november 2006, og der er ikke en direkte sammenhæng mellem analyserne og den risikovurdering der er beskrevet i Tabel 2, Rigs, s. 20, hvor risikoen vurderes til middel. Det er også et problem at man giver en samlet vurdering for et helt område, når der kan være enkelte dele af et område, der kan have meget høje risiko.
+
+Domsstolsstyrelsen vurderede udfra sin risikoanalyse at der var tale om et middelrisikoprojekt, mens Rigsrevisionen senere vurderede at der var tale om et højrisikoprojekt grundet stram tidsplan, komplekst system baseret på uprøvet teknologi, mange interessenter og mange organisatoriske udfordringer.
+
+Risikostyringen blev styrket i februar 2008, ca. 3 måneder efter 1. udskydelse, da Domsstolsstyrelsen fandt et behov for at øge risikostyringen. Dette giver jo et klart billede af at den oprindelige risikostyring ikke var god nok, og hvis de havde arbejdet med en bedre risikostyring fra starten af kunne udsættelserne måske have været undgået.
+
+\section{Konklusion}
+Det er tydeligt at se ud fra ovenstående punkter, at der var nogle modenhedsproblemer i Domsstolsstyrelsen. Det giver derfor også mening at projektet blev forsinket, da risikostyringen f.eks. ikke var i orden. Dette gjorde at da leverandøren mistede vigtige folk, så var der ikke taget højde for dette på forhånd, og man mistede derfor vigtig tid. En anden tidssluger er at man undervurdede mængden af uddannede medarbejdere, der ville flytte med til Hobro, og dermed behovet for uddannelse og oplæring af nye medarbejdere inden det nye program skulle i gang. Dette gjorde at produktiviteten faldt ved indførsel af det nye system, da man ikke havde nok medarbejdere til at opretholde driften, når alle skulle vænne sig til et nyt system.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Rigs}
+  Rigsrevisionen,
+  \emph{Beretning til Statsrevisorerne om det digitale   
+  tinglysningsprojekt}
+  August, 2010
+
+\bibitem{Krav}
+  Devoteam Consulting
+  \emph{Bilag 2: Kravspecifikation for det kommende
+  system til elektronisk tinglysning}
+  26. juni 2006
+
+\bibitem{Tid}
+  \emph{Bilag 1: Hovedtidsplan}
+  26. juni 2006
+
+\end{thebibliography}
+
+
+\end{document}
