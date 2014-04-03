@@ -40,10 +40,10 @@ Paw Saabye Petersen, 110788, vwn245}
 %\newpage
 
 \section{Indledning}
+Ideen med denne opgave er at undersøge om der fra Domstolsstyrelsens side af var bestemtpå hvilken måde Tinglysningsprojektet skulle udvikles. Derefter skal det undersøges hvilken metode der reelt blev brugt til at udvikle systemet på, og til sidst skal fordele og risici ved denne valgte metode belyses. Det er interessant at se om det er ejeren af projektet eller leverandøren, der i sidste ende har valgt hvilken metode, der skulle bruges, og se om valgt af metode måske bar en del af grunden for forsinkelse og fordyring af projektet.
 
 
-
-\section{Domstyrelsens krav og forventninger til systemudviklingsmetoden}
+\section{Domstolsstyrelsens krav og forventninger til systemudviklingsmetoden}
 Domstolsstyrelsen specificerer ikke direkte i deres kontrakt\cite{Kontrakt}
 eller Kravspecifikation\cite{Krav} hvilken systemudviklingsmetode der skal
 bruges til at udvikle systemet.
@@ -53,36 +53,43 @@ er lagt.
 I hovedtidsplanen ses det hvordan der først skal udarbejdes specifikationer.
 Herefter deles systemet op i mindre dele der hver skal designes og implementeres
 i hver sine efterfølgende faser. Af kontrakten punkt 10.1
-fremgår det at efter hver af disse faser skal delsystemet af prøves og \textit{``Først når overtagelsesprøven for fasen er skriftligt go dkendt af kunden, anses
-  fasen for overtaget (overtagelsesdagen), jfr. punkt 11.''}\cite[s.~16]{Kontrakt}.
+fremgår det at efter hver af disse faser skal delsystemet afprøves og 
+\textit{``Først når overtagelsesprøven for fasen er skriftligt godkendt af kunden, 
+anses fasen for overtaget (overtagelsesdagen), jfr. punkt 11.''}\cite[s.~16]{Kontrakt}.
 
-Dermed ligger domstolsstyrelsen op til at der bruges en klassisk vandfaldsmodel
+Dermed lægger Domstolsstyrelsen op til at der bruges en klassisk vandfaldsmodel
 hvor man først laver en overordnet specifikation og så går man i gang med
-arbejdet. Man har dog valgt at ligge design delen for hvert enkelt delsystem ned
+arbejdet. Man har dog valgt at lægge designdelen for hvert enkelt delsystem ned
 i en fase sammen med implementeringen deraf. Det er dog stadig en vandfaldsmodel
-hvor strømmen blot bevæger sig igennem flere små vandfald en et stort.
-
+hvor strømmen blot bevæger sig igennem flere små vandfald end et stort.
 
 Kontrakten lader med den skarpe tidsplan dermed ikke leverandøren arbejde på
 andre måder.
 
 \section{Leverandørens udviklingsmetode}
-Da det hverken står i Rigsrevisionens rapport eller nogen dokumenter relevante til Tinglysningsprojektet, hvilken systemudviklingsmetode der er brugt, så vil vi komme med et kvalificeret bud.
-Og udfra alle dokumenter, der fortæller os om projektet, bliver vi ledt i retningen af, at der er brugt vandfaldsmodellen til projektet.
-Det, der leder os i retningen af, at vandfaldsmodellen er den brugte, er bl.a. tidsplanen, der er lagt for projektet, at kravsspecifikationen er meget udtømmende omkring krav til systemet og
-at systemet bliver implementeret ved big-bang.
+Da det hverken står i Rigsrevisionens rapport\cite{Rigs} eller nogen dokumenter relevante til Tinglysningsprojektet, hvilken systemudviklingsmetode der er brugt, så vil vi komme med et kvalificeret bud.
+Udfra alle dokumenter, der fortæller os om projektet, bliver vi ledt i retningen af, at der er brugt vandfaldsmodellen til projektet.
+Det der leder os i retning af at vandfaldsmodellen er den brugte er bl.a. projektets tidsplan, at kravsspecifikationen er meget udtømmende omkring krav til systemet og at systemet bliver implementeret som et big-bang-projekt.
 Vandfaldsmodellen er netop defineret ved, at det fra starten skal være meget klart, hvordan projektet skal foregå.
-Her er projektet indelt i 5 faser, der skal følges sekvensielt og når man er færdig med en, så kan man ikke gå tilbage.
-De fem faser er Analyse, Design, Programmering, Test og Idriftsættelse og vedligehold.
+Her er projektet indelt i 5 faser, der skal følges sekventielt og når man er færdig med en, så kan man ikke gå tilbage.
+De fem faser er Analyse, Design, Programmering, Test \& Idriftsættelse og Vedligehold.
 
-Projektstrukturen ville have været helt anderledes, hvis der havde være valgt en agil metodologi.
-I de agile metodologier deles projekterne ned i korte og gentagelige faser, hvor der for hver af disse skal komme et brugbart produkt ud til kunden.
+Projektstrukturen ville have været helt anderledes, hvis der havde været valgt en agil metodologi.
+I de agile metodologier deles projekterne op i korte og gentagelige faser, hvor der for hver af disse skal komme et brugbart produkt ud til kunden.
 Det giver kunden mulighed for at komme med ændringer og forslag til projektet gennem hele processen og kræver ikke
 en stor kravsspecifikation med det samme, da analyse og dokumentation ikke ligger som selvstændige aktiviteter, men
 foregå i hver af de gentagelige faser.
 
+\section{Risici og fordele ved vandfaldsmetoden}
+Fordele ved vandfaldsmetoden indebærer at man har et tydeligt og kontrollerbart forløb. Det er nemt at følge med i de enkelte instanser af systemet, da de enkelte dele skal afleveres hver for sig, og skal kontrolleres inden man arbejder videre med næste del af systemet. Dette sikrer at ejeren af projektet (her Domstolsstyrelsen) kan følge med og bevare fremdriften i projektet, da der hele tiden er indlagt små afleveringer undervejs, og hele projektet er fastlagt fra starten af. 
+
+Det at projektet at fastlagt fra starten af er dog også en af de store risci ved vandfaldsmetoden. Metoden gør at projektet ikke tager højde for at virkeligheden og behovene kan ændre sig undervejs i udviklingen. Dette gør at når projektet endelig er færdig, kan det være totalt utidssvarende, hvilket kan gøre at projektet aldrig bliver sat i drift, eller at der skal bruges en hel masse penge på at føre systemet up to date.
+
+En anden risici er at det tager lang tid før noget kan vurderes om det virker som forventet. I dette projekt er der tale om flere vandfald, da systemet består af flere dele og hver del afleveres individuelt. Dette betyder dog stadig at man får hver enkelt del, når denne er helt færdigudviklet, og hvis den ikke har den funktionalitet eller det udseende som forventet, skal man tilbage og reparere denne del.
+
 
 \section{Konklusion}
+Det er tydeligt at se fra ovenstående beretning at den fremlagte kravspecifikation og tidsplan lægger op til at det er vandfaldsmetoden, der skal anvendes. Det ville derfor have svært for leverandøren ikke at følge dette og arbejde på denne måde. Det er dog også klart at projektet måske ville have haft bedre af at anvende f.eks. den agile metode, sådan at man ville have haft mulighed for at undersøge om tingene rent faktisk virkede som forventet etc. Dette ville måske have sparet forsinkelser og penge, da det er muligt at opdage fejl tidligere, mens det stadig er nemt at rette.
 
 
 \begin{thebibliography}{9}
